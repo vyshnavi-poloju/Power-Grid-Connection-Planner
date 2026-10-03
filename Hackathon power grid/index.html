@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Power Grid Planner</title>
+</head>
+<body>
+
+    <h1>⚡ Power Grid Connection Planner</h1>
+
+    <p>Backend working successfully!</p>
+
+    <button onclick="runAlgorithm()">Run Algorithm</button>
+
+    <p id="result"></p>
+
+    <script>
+        function runAlgorithm() {
+            fetch('/run')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("result").innerHTML = 
+                    "Result: " + data.result;
+            });
+        }
+    </script>
+
+</body>
+</html>
